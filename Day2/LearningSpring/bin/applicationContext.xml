@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<beans  
+    xmlns="http://www.springframework.org/schema/beans"  
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
+    xmlns:p="http://www.springframework.org/schema/p"  
+    xsi:schemaLocation="http://www.springframework.org/schema/beans  
+               http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">  
+  
+  		<!--Creating Address Bean  -->
+  		<bean id="add" class="Emp.Address">
+  		<constructor-arg value="deirdre sq"></constructor-arg>
+  		<constructor-arg value="Asburn"></constructor-arg>
+  		<constructor-arg value="Virginia"></constructor-arg>
+  		<constructor-arg value="20166"></constructor-arg>
+  		</bean>
+
+        <!--Creating Employee Bean 1  -->
+		<bean id="empbean" class="Emp.Employee">
+			<property name="name" value="Preeti"></property>
+		</bean>
+
+
+		<bean id="empbean1" class="Emp.Employee">
+			<constructor-arg value="Phu"></constructor-arg>
+			<constructor-arg value="101" type="int"> </constructor-arg>			
+			<constructor-arg>
+				<ref bean="add"/>
+			</constructor-arg>
+			<property name="manager">			
+				<map>
+					<entry key="101" value="Ana" ></entry>
+					<entry key="102" value="Vani" ></entry>
+					<entry key="103" value="Arun" ></entry>
+				</map>
+			</property>
+			
+		</bean>
+		
+	<bean id="a1" class="Exam.Answer">
+		<property name="id" value="1"></property>
+		<property name="answer" value="Modularity"></property>
+		<property name="from" value="Yakub"></property>	
+	</bean>
+	
+	<bean id="a2" class="Exam.Answer">
+		<property name="id" value="2"></property>
+		<property name="answer" value="Lightweight"></property>
+		<property name="from" value="joseph"></property>
+		
+	</bean>
+	
+	
+	
+	
+		<bean id="q" class="Exam.Question">
+			<property name="id" value="1"></property>
+			<property name="name" value="What are the benefits of Spring framework"></property>
+			<property name="answers">
+			<list>
+				<ref bean="a1"/>
+				<ref bean="a2"/>
+			</list>		
+			</property>
+			
+			
+			
+			
+		</bean>
+		
+
+</beans>  
