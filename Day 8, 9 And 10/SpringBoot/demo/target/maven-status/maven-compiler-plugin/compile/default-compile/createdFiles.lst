@@ -1,0 +1,12 @@
+com\example\demo\dao\impl\CustomerRepositoryImpl.class
+com\example\demo\DemoApplication.class
+com\example\demo\model\Customer.class
+com\example\demo\service\ProductService.class
+com\example\demo\service\impl\CustomerServiceImpl.class
+com\example\demo\dao\ProductRepository.class
+com\example\demo\service\CustomerService.class
+com\example\demo\controller\ShoppingController.class
+com\example\demo\service\impl\ProductServiceImpl.class
+com\example\demo\dao\impl\ProductRepositoryImpl.class
+com\example\demo\model\Product.class
+com\example\demo\dao\CustomerRepository.class
